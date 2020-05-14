@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import UserPosts from './components/user-posts/user-posts.component';
+import UsersList from './components/users-list/users-list.component';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserPosts name='Test name' email='test@gmail.com' sourceOfData='https://jsonplaceholder.typicode.com/posts'/>
+      <br/><br/><br/><br/>
+      <UsersList sourceOfData='https://jsonplaceholder.typicode.com/users'/>
     </div>
   );
 }
-
 export default App;
